@@ -1,0 +1,138 @@
+/* ESTILOS GENERALES*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* CSS GRID - DEFINIR EL GRID DEL CONTENEDOR PRINCIPAL*/
+.contenedor {
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas:    "header"
+                            "slider"
+                            "videoDescription"
+                            "funciones"
+                            "servicios"
+                            "contacto"
+                            "footer";
+}
+
+/* EMPIEZA EL ACOMODO DE LAS GRID AREAS*/
+
+/* HEADER */
+.contenedor .cabecera {
+    grid-area: header;
+}
+
+
+/* SLIDER */
+.contenedor .slider {
+    grid-area: slider;
+}
+
+/* VIDEO DE DESCRIPCION */
+.contenedor .videoDescripcion {
+    grid-area: videoDescription;
+}
+
+/* FUNCIONES */
+/* FUNCIONES - DEFINIR EL GRID DE LAS FUNCIONES */
+.contenedor .funciones {
+    grid-area: funciones;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:    "title title"    
+                            "funcion1 funcion2"
+                            "funcion3 funcion4";
+}
+
+/* FUNCIONES - ACOMODO DE LAS GRID AREAS */
+.contenedor .funciones h1 {
+    grid-area: title;
+}
+
+.contenedor .funciones .funcion1 {
+    grid-area: funcion1;
+}
+
+.contenedor .funciones .funcion2 {
+    grid-area: funcion2;
+}
+
+.contenedor .funciones .funcion3 {
+    grid-area: funcion3;
+}
+
+.contenedor .funciones .funcion4 {
+    grid-area: funcion4;
+}
+
+
+/* SERVICIOS */
+/* SERVICIOS - DEFINIR EL GRID DE LOS SERVICIOS*/
+.contenedor .servicios {
+    grid-area: servicios;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:    "servicio servicio"    
+                            "servicio1 servicio2"
+                            "servicio3 servicio4";
+}
+
+/* SERVICIOS - ACOMODO DE LAS GRID AREAS*/
+.contenedor .servicios .servicio {
+    grid-area: servicio;
+}
+
+.contenedor .servicios .servicio1 {
+    grid-area: servicio1;
+}
+
+.contenedor .servicios .servicio2 {
+    grid-area: servicio2;
+}
+
+.contenedor .servicios .servicio3 {
+    grid-area: servicio3;
+}
+
+.contenedor .servicios .servicio4 {
+    grid-area: servicio4;
+}
+
+/* CONTACTO */
+/* CONTACTO - DEFINIR EL GRID DE CONTACTO*/
+.contenedor .contacto {
+    grid-area: contacto;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:    "contact1 contact2 contact3";
+}
+
+/*CONTACTO - ACOMODO DE LAS GRID AREAS*/
+.contenedor .contacto .contacto1 {
+    grid-area: contact1;
+}
+
+.contenedor .contacto .contacto2 {
+    grid-area: contact2;
+}
+
+.contenedor .contacto .contacto3 {
+    grid-area: contact3;
+}
+
+
+/* FOOTER */
+.contenedor .piePagina {
+    grid-area: footer;
+}
