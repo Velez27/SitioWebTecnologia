@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+body {
+    background: #0A2440;
+    color: #fff;
+}
+
 /* CSS GRID - DEFINIR EL GRID DEL CONTENEDOR PRINCIPAL*/
 .contenedor {
     width: 95%;
@@ -28,16 +33,47 @@
     grid-area: header;
 }
 
+.contenedor nav {
+    border-radius: 10px;
+}
 
 /* SLIDER */
 .contenedor .slider {
     grid-area: slider;
+    justify-self: center;
+}
+
+.contenedor .slider img {
+    width: 800px;
+    height: 400px;
+    border-radius: 5px;
 }
 
 /* VIDEO DE DESCRIPCION */
 .contenedor .videoDescripcion {
     grid-area: videoDescription;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:    "video texto";
+    justify-items: center;
 }
+
+.contenedor .videoDescripcion iframe {
+    grid-area: video;
+    width: 560px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.contenedor .videoDescripcion p {
+    grid-area: texto;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+
 
 /* FUNCIONES */
 /* FUNCIONES - DEFINIR EL GRID DE LAS FUNCIONES */
@@ -50,11 +86,37 @@
     grid-template-areas:    "title title"    
                             "funcion1 funcion2"
                             "funcion3 funcion4";
+    justify-items: center;
 }
 
 /* FUNCIONES - ACOMODO DE LAS GRID AREAS */
 .contenedor .funciones h1 {
     grid-area: title;
+    text-align: left;
+    justify-self: left;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.contenedor .funciones h2 {
+    background: #298EFF;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border: 1px solid black;
+    width: 320px;
+    height: 100px;
+}
+
+.contenedor .funciones h2 a {
+    text-decoration: none;
+}
+
+.contenedor .funciones h2:hover {
+    background: #14477F;
+    color: #fff;
+    transition: background-color 1s ease-out;
+    outline: 0;
 }
 
 .contenedor .funciones .funcion1 {
@@ -79,17 +141,29 @@
 .contenedor .servicios {
     grid-area: servicios;
     display: grid;
-    grid-gap: 5px;
+    grid-gap: 8px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas:    "servicio servicio"    
+    grid-template-areas:    "servicioT1 servicioT2"    
                             "servicio1 servicio2"
                             "servicio3 servicio4";
+    
+    justify-items: center;
 }
 
 /* SERVICIOS - ACOMODO DE LAS GRID AREAS*/
-.contenedor .servicios .servicio {
-    grid-area: servicio;
+.contenedor .servicios .servicioT1 {
+    grid-area: servicioT1;
+    text-align: justify;
+}
+
+.contenedor .servicios .servicioT2 {
+    grid-area: servicioT2;
+}
+
+.contenedor .servicios .servicioT2 img {
+    width: 600px;
+    height: 300px;
 }
 
 .contenedor .servicios .servicio1 {
@@ -116,6 +190,7 @@
     grid-gap: 5px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:    "contact1 contact2 contact3";
+    justify-items: center;
 }
 
 /*CONTACTO - ACOMODO DE LAS GRID AREAS*/
@@ -131,8 +206,12 @@
     grid-area: contact3;
 }
 
+.contenedor .contacto ul {
+    list-style: none;
+}
 
 /* FOOTER */
 .contenedor .piePagina {
     grid-area: footer;
+    justify-self: center;
 }
