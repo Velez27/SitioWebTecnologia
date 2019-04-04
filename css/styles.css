@@ -215,3 +215,31 @@ body {
     grid-area: footer;
     justify-self: center;
 }
+
+@media screen and (max-width: 768px){
+    .contenedor .videoDescripcion {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:    "video"
+                                "texto";
+    }
+    .contenedor .funciones {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        grid-template-areas:    "title"    
+                                "funcion1"
+                                "funcion2"
+                                "funcion3"
+                                "funcion4";
+    }
+    .contenedor .servicios {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+        grid-template-areas:    "servicioT1"
+                                "servicioT2"    
+                                "servicio1"
+                                "servicio2"
+                                "servicio3"
+                                "servicio4";
+    }
+}
